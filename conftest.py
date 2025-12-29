@@ -13,9 +13,9 @@ def page():
         yield page
         browser.close()
         
-@pytest.fixture
+"""@pytest.fixture
 def loggedinpage(page):
     l = Login(page)
     l.verify_login("https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC","john","demo")
     return page
-
+"""
