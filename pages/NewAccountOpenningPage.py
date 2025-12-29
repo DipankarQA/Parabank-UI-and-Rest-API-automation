@@ -14,7 +14,7 @@ class NewAccountOpenningPage():
         self.page.click("//*[text()='Open New Account']")
         self.page.click("//*[@id='type']")
         self.page.locator("//*[@id='type']").select_option(index=1)
-        self.page.locator("//*[@id='fromAccountId']").select_option(label='12345')
+        self.page.locator("//*[@id='fromAccountId']").select_option(value='12345')
         self.page.click("((//*[@class='button'])[2])")
         self.page.locator("//*[@id='newAccountId']").wait_for(state="visible")
         acc_num=self.page.locator("//*[@id='newAccountId']").text_content().strip()
